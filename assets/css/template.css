@@ -1,3 +1,7 @@
+:root {
+    --link-color: #2418AE;
+    --text-color: #666;
+}
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +10,7 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: Arial;
+    
 }
 body {
     margin: 0;
@@ -15,7 +20,8 @@ body {
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    overflow-x: hidden;
     
 }
 img {
@@ -24,18 +30,20 @@ img {
 header {
     max-height: 56px;
     margin: 5px 10px 0px;
-    flex: 1;
 }
 .menu-controls {
     float: right;
     height: 56px;
     width: 200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-right: 20px;
 }
-
+.config {
+    color: var(--text-color);
+}
 .perfil {
     height: 42px;
     width: 42px;
@@ -53,6 +61,25 @@ header {
 #head {
     flex: 2;
 }
+#center {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    margin-left: 15%;
+    max-width: 40%;
+    line-height: 1.4em;
+    flex-direction: column;
+}
+.link-news {
+    color: var(--link-color);
+}
+.link-head h5 {
+    color: var(--text-color);
+
+}
+.link-desc {
+    margin-bottom: 20px;
+}
 .container {
     width: 584px;
     max-width: 100%;
@@ -61,7 +88,7 @@ header {
     width: 100px;
     max-width: 100%;
     margin-left: 25px;
-    margin-top: 40px;
+    margin-top: 30px;
     
 }
 .busca-control {
@@ -170,21 +197,18 @@ footer {
 }
 .left {
     float: left;
+    margin-left: 15%;
+    font-size: 14px;
+    padding-bottom: 20px;
 }
-.right {
-    float: right;
-}
-.left a,
-.right a {
+.left a {
     margin: 0 15px;
     color: #000000;
 }
-.left a:hover,
-.right a:hover {
+.left a:hover {
     text-decoration: underline;
 }
-.left a:first-child,
-.right a:last-child {
+.left a:first-child {
     margin: 0 0;
 }
 
@@ -202,15 +226,34 @@ footer {
     footer {
         max-height: 200px;
     }
-    .left,
-    .right {
+    .left {
         float: initial;
         margin: 15px auto;
+    }
+    .options {
+        width: 100%;
+        display: flex;
+        margin-top: 10px;
+    }
+    {
+        max-width: 50%;
     }
 }
 @media (max-width: 400px) {
     .buttons {
         flex-direction: column;
+    }
+    .options {
+        width: 100%;
+        display: flex;
+        margin-top: 10px;
+    }
+    .options ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .container {
+        max-width: 50%;
     }
 }
 
